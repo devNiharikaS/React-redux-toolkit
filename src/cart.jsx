@@ -1,17 +1,23 @@
-const cart = () => {
+import { useSelector } from "react-redux"
+const Cart = () => {
+    const selector = useSelector((state)=>state.cart.value);
+    console.log(selector);
     return (
 
 
-        <div class="header-icons">
+        <div className="header-icons">
             <ul>
                 <li><a href="#">👤</a></li>
-                <li class="cart">
+                <li className="cart">
                     <a href="#">🛒</a>
-                    <span class="cart-count">5</span>
+                    <span className="cart-count">5</span>
                 </li>
+                <button class="btn">Add to Cart</button>
             </ul>
         </div>
+    
+       
 
-    )
-}
-export default cart
+    );
+};
+export default Cart;
