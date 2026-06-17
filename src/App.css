@@ -1,15 +1,14 @@
-
 body {
     font-family: Arial, sans-serif;
-     margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(225, 158, 202);
-  }
+}
 
 header {
     background: hsl(0, 67%, 62%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     background-color: #8a85bf;
 }
@@ -72,7 +71,7 @@ header {
     position: absolute;
     top: -8px;
     right: -12px;
-    background: rgb(223, 31, 140);
+    background: rgb(22, 1, 13);
     color: rgb(250, 163, 163);
     width: 20px;
     height: 20px;
@@ -83,9 +82,10 @@ header {
     align-items: center;
     font-weight: bold;
 }
-.btn{
+
+.btn {
     padding: 12px 25px;
-    background-color: hsl(338, 95%, 70%);
+    background-color: hwb(340 83% 13%);
     color: #151414;
     border: none;
     border-radius: 5px;
@@ -95,17 +95,75 @@ header {
     transition: 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: hsl(54, 64%, 91%);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.remove-button{
-  background-color: #8a85bf;
-  margin: left 50px; ;
+.remove-button {
+    background-color: #8a85bf;
+    margin: left 50px;
+    ;
 }
 
-.remove-button:hover{
-  background-color: #b0bcae;
+.remove-button:hover {
+    background-color: #b0bcae;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, lfr));
+    gap: 20px;
+}
+
+.card {
+    background: #d8b484;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 40%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.brand {
+    font-size: 13px;
+    color: #080808;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.rating {
+    font-size: 14px;
+    color: #100f0c;
 }

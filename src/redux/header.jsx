@@ -1,20 +1,21 @@
+import Cart from "../cart"
 const Header = () => {
     return (
         <header>
-    <div class="container">
-        <div class="logo">
+    <div className="container">
+        <div className="logo">
             <h2>ShopMart</h2>
         </div>
 
         <nav>
-            <ul class="menu">
+            <ul className="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">Offers</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <cart/ > 
+            <Cart/ > 
         </nav>
 
 

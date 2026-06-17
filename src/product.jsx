@@ -1,34 +1,35 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import images from "./assets/constansts/imges"
 import { additem, removeitem } from "./redux/slice";
+import { useEffect } from "react";
+import { fetchProducts } from './redux/productSlice'
 const Product = () => {
-    const dispatch = useDispatch; { }
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchProducts())
+
+    }, []
+    )
+    const productSelector = useSelector((state) => state.products?.items || [])
+    console.log(productSelector);
+
     return (
-        <div class="product-card">
-            <div class="product-image">
-                <img src={images.mouse} alt="Product Image" />
-            </div>
+        <div className="grid">
+            {
+                productSelector.length && productSelector.map((item) => (
+                    <div key={item.id} className="card">
+                        <img src={item.thumbnail} />
+                        <div className="content">
+                            <div className="title">{item.title}</div>
+                            <div className="brand">{item.brand}</div>
+                            <div className="prize">{item.prize}</div>
+                            <div className="rating">{item.rating}</div>
+                            <button className="btn">Add to cart</button>
+                        </div>
 
-            <div class="product-details">
-                <h2>Wireless Bluetooth Headphones</h2>
-
-                <p class="brand">Brand: Sony</p>
-
-                <p class="description">
-                    High-quality wireless headphones with noise cancellation,
-                    30-hour battery life, and premium sound quality.
-                </p>
-
-                <div class="price-section">
-                    <span class="current-price">₹4,999</span>
-                    <span class="old-price">₹6,999</span>
-                </div>
-
-                <p class="rating">⭐⭐⭐⭐☆ (4.5/5)</p>
-
-                <button onClick = {() => dispatch(additem(1))} className="btn">Add to Cart</button>
-                <button onClick = {() => dispatch(removeitem(1))} className="btn"remove-button>Remove from Cart</button>
-            </div>
+                    </div>
+                ))
+            }
         </div>
 
 

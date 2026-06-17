@@ -12,7 +12,7 @@ const Cart = () => {
                     <a href="#">🛒</a>
                     <span className="cart-count">5</span>
                 </li>
-                <button class="btn">Add to Cart</button>
+                <button className="btn">Add to Cart</button>
             </ul>
         </div>
     
