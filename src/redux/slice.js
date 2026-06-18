@@ -1,23 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    value: 0,
+    items:[]
 }
 
-const cart = createSlice({
+export const cart = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-
-        additem: (state) => {
-            state.value += 1;
+ 
+        additem:(state,action) => {
+            //state.value += 1;
+            console.log(action);
+            state.ites.push(action.payload)
         },
         
-        removeitem: (state) => {
+        removeitem:(state) => {
            state.value>0? state.value -= 1:null;
         },
         
-        clearallitem: (state) => {
+        clearallitem:(state) => {
             state.value = 0;
         }
 

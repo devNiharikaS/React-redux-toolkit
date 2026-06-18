@@ -10,9 +10,9 @@ const Cart = () => {
                 <li><a href="#">👤</a></li>
                 <li className="cart">
                     <a href="#">🛒</a>
-                    <span className="cart-count">5</span>
+                    <span className="cart-count">{selector}</span>
                 </li>
-                <button className="btn">Add to Cart</button>
+                
             </ul>
         </div>
     
