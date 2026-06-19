@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 const Cart = () => {
-    const selector = useSelector((state)=>state.cart.value);
-    console.log(selector);
+    const cartSelector = useSelector((state)=>state.cart.items);
+    console.log(cartSelector.length);
     return (
 
 
@@ -10,7 +10,7 @@ const Cart = () => {
                 <li><a href="#">👤</a></li>
                 <li className="cart">
                     <a href="#">🛒</a>
-                    <span className="cart-count">{selector}</span>
+                    <span className="cart-count">{cartSelector.length}</span>
                 </li>
                 
             </ul>

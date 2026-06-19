@@ -11,7 +11,7 @@ function App() {
     <>
     <Header/>
      
-      <button onClick={()=>dispatch(clearallitem)} className='btn'> clear cart </button>
+     
       <Product/>
     </>
   )

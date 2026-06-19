@@ -102,13 +102,13 @@ header {
 }
 
 .remove-button {
-    background-color: #8a85bf;
+    background-color: #e83232;
     margin: left 50px;
     ;
 }
 
 .remove-button:hover {
-    background-color: #b0bcae;
+    background-color: #9dda92;
 }
 
 .grid {
@@ -170,4 +170,12 @@ header {
 
 .clear-btn {
 margin: 1rem;
+}
+
+.btn-disabled{
+    background-color: #d4d8dc;
+}
+
+.btn-disabled:hover{
+    background-color: #efd177;
 }
