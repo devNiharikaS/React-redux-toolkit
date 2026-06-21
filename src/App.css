@@ -3,14 +3,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(225, 158, 202);
+    background-color: rgb(201, 195, 195);
+    
 }
 
 header {
     background: hsl(0, 67%, 62%);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
-    background-color: #8a85bf;
+    background-color: #cbf0f1;
 }
 
 .container {
@@ -46,7 +47,7 @@ header {
 }
 
 .menu li a:hover {
-    color: #ff6600;
+    color: #056298;
 }
 
 /* Icons */
@@ -71,8 +72,8 @@ header {
     position: absolute;
     top: -8px;
     right: -12px;
-    background: rgb(188, 93, 147);
-    color: rgb(250, 163, 163);
+    background: rgb(19, 18, 19);
+    color: rgb(255, 255, 255);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -115,6 +116,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
@@ -169,13 +171,27 @@ header {
 }
 
 .clear-btn {
-margin: 1rem;
+    margin: 1rem;
 }
 
-.btn-disabled{
+.btn-disabled {
     background-color: #d4d8dc;
 }
 
-.btn-disabled:hover{
+.btn-disabled:hover {
     background-color: #efd177;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: auto;
+
+    background-color: #a1d0eb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.cart-header{
+    
 }
