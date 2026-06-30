@@ -16,18 +16,19 @@ export const cart = createSlice({
             localStorage.setItem('cart',JSON.stringify(state.items))
         },
         
-        removeitem:(state,action) => {
+        removeItem:(state,action) => {
          const cartData= state.items.filter(item=> item.id!=action.payload.id);
          state.items=cartData;
-         localStorage.setItem('cart',JSON.stringify(cartData))
+         localStorage.setItem('cart',JSON.stringify(cartData));
         },
         
         clearallitem:(state) => {
-            state.value = 0;
+            state.items =[];
         }
 
     }
 
 })
-export const {additem,removeitem,clearallitem} = cart.actions
+export const {additem,removeItem,clearallitem} = cart.actions
+
 export default cart.reducer

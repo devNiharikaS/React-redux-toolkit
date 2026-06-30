@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import images from "./assets/constansts/imges"
-import { additem,removeitem} from "./redux/slice";
+import { additem,removeItem} from "./redux/slice";
 import { useEffect } from "react";
 import { fetchProducts } from './redux/productSlice'
 const Product = () => {
@@ -11,7 +11,6 @@ const Product = () => {
     }, []
     )
     const productSelector = useSelector((state) => state.products?.items || [])
-    console.log(productSelector);
 
      const cartSelector = useSelector((state)=>state.cart.items);
     console.log(cartSelector.length);
@@ -19,7 +18,7 @@ const Product = () => {
     return (
         <div className="grid">
             {
-                productSelector.length && productSelector.map((item) => (
+                productSelector.length>0  && productSelector.map((item) => (
                     <div key={item.id} className="card">
                         <img src={item.thumbnail} />
                         <div className="content">
@@ -29,7 +28,7 @@ const Product = () => {
                             <div className="rating">{item.rating}</div>
                             {
                                 cartSelector.find(cartItem=>cartItem.id == item.id)?
-                                 <button onClick={()=>dispatch(removeitem(item))} className="btn remove-button">Remove from cart</button>
+                                 <button onClick={()=>dispatch(removeItem(item))} className="btn remove-button">Remove from cart</button>
                             :
                             <button onClick={()=>dispatch(additem(item))} className="btn">Add to cart</button>
                         
